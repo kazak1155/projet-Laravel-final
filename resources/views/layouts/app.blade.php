@@ -29,9 +29,9 @@
             @endif
 
             <!-- Page Content -->
-            <main class="px-4">
-                {{ $slot }}
-            </main>
+{{--            <main class="px-4">--}}
+{{--                {{ $slot }}--}}
+{{--            </main>--}}
         </div>
     </body>
 </html>
