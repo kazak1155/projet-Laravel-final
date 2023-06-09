@@ -19,7 +19,7 @@ return new class extends Migration
             $table->decimal('floor_area', 8, 2)->nullable(false);
             $table->string('type', 100)->nullable(false);
             $table->integer('price')->nullable(false);
-            $table->foreignId('hotel_id')->nullable(false)->constrained();
+            $table->foreignId('hotel_id')->nullable(false)->constrained()->onDelete('cascade');;
             $table->timestamps();
         });
     }
