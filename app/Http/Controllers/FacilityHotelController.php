@@ -2,23 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Hotel;
+use App\Models\Facility_hotel;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class HotelController extends Controller
+class FacilityHotelController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $hotels =  Hotel::paginate(10);
-
-        return view('hotels.index',
-            [
-                'hotels' => $hotels
-            ]);
+        //
     }
 
     /**
@@ -40,20 +34,15 @@ class HotelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Hotel $hotel)
+    public function show(Facility_hotel $facility_hotel)
     {
-        $hotel =  Hotel::where($hotel->id);
-
-        return view('hotels.show',
-            [
-                'hotel' => $hotel
-            ]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Hotel $hotel)
+    public function edit(Facility_hotel $facility_hotel)
     {
         //
     }
@@ -61,7 +50,7 @@ class HotelController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Hotel $hotel)
+    public function update(Request $request, Facility_hotel $facility_hotel)
     {
         //
     }
@@ -69,7 +58,7 @@ class HotelController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Hotel $hotel)
+    public function destroy(Facility_hotel $facility_hotel)
     {
         //
     }
