@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Hotel;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,10 @@ class ReviewFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'text' => $this->faker->sentence(10),
+            'grade' => $this->faker->randomDigitNotNull(),
+            'hotel_id' => Hotel::inRandomOrder()->first()->getKey(),
+            'user_id' => User::inRandomOrder()->first()->getKey(),
         ];
     }
 }

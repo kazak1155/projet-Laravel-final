@@ -2,12 +2,14 @@
 
 namespace Database\Factories;
 
+use App\Models\Facility;
+use App\Models\Room;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Facility_room>
  */
-class FacilityRoomFactory extends Factory
+class Facility_roomFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +19,8 @@ class FacilityRoomFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'facility_id' => Facility::inRandomOrder()->first()->getKey(),
+            'room_id' => Room::inRandomOrder()->first()->getKey(),
         ];
     }
 }

@@ -1,9 +1,9 @@
 <div class="bg-white rounded shadow-md flex card text-grey-darkest">
-    <img class="w-1/2 h-full rounded-l-sm" src="{{ Storage::url($hotel->poster_url ) }}" alt="Hotel Image">
+    <img class="w-1/2 h-full rounded-l-sm" src="https://loremflickr.com/320/240?random=2" alt="Hotel Image">
     <div class="w-full flex flex-col justify-between p-4">
         <div>
             <div class="text-xs">
-                {{ $hotel->address }}
+                {{ $hotel->address }}{{ Storage::url($hotel->poster_url ) }}
             </div>
         </div>
         <div class="pt-2">

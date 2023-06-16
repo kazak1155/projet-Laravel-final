@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('role_user', function (Blueprint $table) {
+        Schema::create('role_users', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50)->nullable(false);
             $table->foreignId('user_id')->nullable(false)->constrained()->onDelete('cascade');

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 100)->nullable(false);
             $table->text('description')->nullable(true);
-            $table->string(' poster_url', 100)->nullable(true);
+            $table->string('poster_url', 100)->nullable(true);
             $table->decimal('floor_area', 8, 2)->nullable(false);
             $table->string('type', 100)->nullable(false);
             $table->integer('price')->nullable(false);
