@@ -40,9 +40,9 @@ class HotelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Hotel $hotel)
+    public function show(Request $request)
     {
-        $hotel =  Hotel::where($hotel->id);
+        $hotel = Hotel::where('id',$request->id)->first();
 
         return view('hotels.show',
             [

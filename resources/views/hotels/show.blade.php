@@ -3,16 +3,16 @@
     $endDate = request()->get('end_date', \Carbon\Carbon::now()->addDay()->format('Y-m-d'));
 @endphp
 
-<x-app-layout>
+{{--<x-app-layout>--}}
     <div class="py-14 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
         <div class="flex flex-wrap mb-12">
-            <div class="w-full flex justify-start md:w-1/3 mb-8 md:mb-0">
-                <img class="h-full rounded-l-sm" src="{{ Storage::url($hotel->poster_url ) }}" alt="Room Image">
-            </div>
+{{--            <div class="w-full flex justify-start md:w-1/3 mb-8 md:mb-0">--}}
+{{--                <img class="h-full rounded-l-sm" src="{{ Storage::url($hotel->poster_url ) }}" alt="Room Image">--}}
+{{--            </div>--}}
             <div class="w-full md:w-2/3 px-4">
                 <div class="text-2xl font-bold">{{ $hotel->name }}</div>
                 <div class="flex items-center">
-                    <x-gmdi-pin-drop-o class="w-5 h-5 mr-1 text-blue-700"/>
+{{--                    <x-gmdi-pin-drop-o class="w-5 h-5 mr-1 text-blue-700"/>--}}
                     {{ $hotel->address }}
                 </div>
                 <div>{{ $hotel->description }}</div>
@@ -42,14 +42,14 @@
                 </div>
             </form>
             @if($startDate && $endDate)
-                <div class="flex flex-col w-full lg:w-4/5">
-                    @foreach($rooms as $room)
-                        <x-rooms.room-list-item :room="$room" class="mb-4"/>
-                    @endforeach
-                </div>
+{{--                <div class="flex flex-col w-full lg:w-4/5">--}}
+{{--                    @foreach($rooms as $room)--}}
+{{--                        <x-rooms.room-list-item :room="$room" class="mb-4"/>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
             @else
                 <div></div>
             @endif
         </div>
     </div>
-</x-app-layout>
+{{--</x-app-layout>--}}
