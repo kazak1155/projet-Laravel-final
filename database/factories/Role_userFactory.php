@@ -18,7 +18,7 @@ class Role_userFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
+            'name' => $this->faker->bothify('userRole-#####'),
             'user_id' => User::inRandomOrder()->first()->getKey(),
         ];
     }

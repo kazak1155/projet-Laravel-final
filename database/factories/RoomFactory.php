@@ -18,7 +18,7 @@ class RoomFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
+            'name' => $this->faker->bothify('room-#####'),
             'description' => $this->faker->sentence(10),
             'poster_url' => $this->faker->text($maxNbChars = 90),
             'floor_area' =>$this->faker->numberBetween(0, 99),

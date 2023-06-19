@@ -17,7 +17,7 @@ class HotelFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
+            'name' => $this->faker->bothify('hotel-#####'),
             'description' => $this->faker->sentence(10),
             'poster_url' => $this->faker->sentence(1),
             'address' => $this->faker->address,

@@ -9,7 +9,7 @@
                 {{ $room->name }}
             </div>
             <div>
-               <span>•</span> {{ $room->floor_area }} м
+               <span>•этаж комнаты</span> {{ $room->floor_area }}
             </div>
             <div>
                     @foreach($room->facilites as $facility)
