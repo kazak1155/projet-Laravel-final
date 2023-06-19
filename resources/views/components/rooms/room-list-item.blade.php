@@ -12,7 +12,7 @@
                <span>•</span> {{ $room->floor_area }} м
             </div>
             <div>
-                    @foreach($room->facilities as $facility)
+                    @foreach($room->facilites as $facility)
                         <span>• {{ $facility->name }} </span>
                     @endforeach
             </div>
@@ -23,13 +23,13 @@
                 <span class="text-lg font-bold">{{ $room->total_price }} руб.</span>
                 <span>за {{ $room->total_days }} ночей</span>
             </div>
-            <form class="ml-4" method="POST" action="{{ route('bookings.store') }}">
-                @csrf
-                <input type="hidden" name="started_at" value="{{ request()->get('start_date', \Carbon\Carbon::now()->format('d-m-Y')) }}">
-                <input type="hidden" name="finished_at" value="{{ request()->get('end_date', \Carbon\Carbon::now()->format('d-m-Y')) }}">
-                <input type="hidden" name="room_id" value="{{ $room->id }}">
-                <x-the-button class=" h-full w-full">{{ __('Book') }}</x-the-button>
-            </form>
+{{--            <form class="ml-4" method="POST" action="{{ route('bookings.store') }}">--}}
+{{--                @csrf--}}
+{{--                <input type="hidden" name="started_at" value="{{ request()->get('start_date', \Carbon\Carbon::now()->format('d-m-Y')) }}">--}}
+{{--                <input type="hidden" name="finished_at" value="{{ request()->get('end_date', \Carbon\Carbon::now()->format('d-m-Y')) }}">--}}
+{{--                <input type="hidden" name="room_id" value="{{ $room->id }}">--}}
+{{--                <x-the-button class=" h-full w-full">{{ __('Book') }}</x-the-button>--}}
+{{--            </form>--}}
         </div>
     </div>
 </div>

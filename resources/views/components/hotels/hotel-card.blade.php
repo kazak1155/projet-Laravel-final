@@ -12,7 +12,7 @@
             <span class="text-2xl text-grey-darkest">₽{{ $hotel->price }}</span>
             <span class="text-lg"> за ночь</span>
         </div>
-        @if($hotel->facility_hotel->facilities->isNotEmpty())
+        @if($hotel->facilities->isNotEmpty())
             <div class="flex items-center py-2">
                 @foreach($hotel->facilities->take(2) as $facility)
                     <div class="pr-2 text-xs">

@@ -42,11 +42,11 @@
                 </div>
             </form>
             @if($startDate && $endDate)
-{{--                <div class="flex flex-col w-full lg:w-4/5">--}}
-{{--                    @foreach($rooms as $room)--}}
-{{--                        <x-rooms.room-list-item :room="$room" class="mb-4"/>--}}
-{{--                    @endforeach--}}
-{{--                </div>--}}
+                <div class="flex flex-col w-full lg:w-4/5">
+                    @foreach($hotel->rooms as $room)
+                        <x-rooms.room-list-item :room="$room" class="mb-4"/>
+                    @endforeach
+                </div>
             @else
                 <div></div>
             @endif
