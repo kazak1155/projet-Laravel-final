@@ -14,6 +14,8 @@ class Facility extends Model
         'name'
     ];
 
+    protected $table = 'facilities';
+
     public function hotels(): BelongsToMany
     {
         return $this->belongsToMany(Hotel::class);

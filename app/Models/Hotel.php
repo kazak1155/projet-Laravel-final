@@ -17,12 +17,14 @@ class Hotel extends Model
         'address'
     ];
 
+    protected $table = 'hotels';
+
     public function rooms()
     {
         return $this->hasMany(Room::class);
     }
 
-    public function facilites(): BelongsToMany
+    public function facilities(): BelongsToMany
     {
         return $this->belongsToMany(Facility::class);
     }

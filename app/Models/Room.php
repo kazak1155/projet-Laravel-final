@@ -21,6 +21,8 @@ class Room extends Model
         'hotel_id',
     ];
 
+    protected $table = 'rooms';
+
     public function hotel()
     {
         return $this->hasOne(Hotel::class);
