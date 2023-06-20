@@ -10,12 +10,12 @@
                 <img class="h-full rounded-l-sm" src="https://loremflickr.com/320/240?random=2" alt="Room Image">
             </div>
             <div class="w-full md:w-2/3 px-4">
-                <div class="text-2xl font-bold">{{ $hotel->name }}</div>
+                <div class="text-2xl font-bold">название отеля: {{ $hotel->name }}</div>
                 <div class="flex items-center">
 {{--                    <x-gmdi-pin-drop-o class="w-5 h-5 mr-1 text-blue-700"/>--}}
-                    {{ $hotel->address }}
+                    Адресс оттеля: {{ $hotel->address }}
                 </div>
-                <div>{{ $hotel->description }}</div>
+                <div>Описание отеля: {{ $hotel->description }}</div>
             </div>
         </div>
         <div class="flex flex-col">
