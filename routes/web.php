@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\HotelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('test', function () {
-    return view('layouts.app');
-});
-
-Route::get('hotels', [HotelController::class, 'index']);
-Route::get('hotels/{id}', [HotelController::class, 'show'])->name('hotels.show');

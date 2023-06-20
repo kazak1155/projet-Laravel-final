@@ -12,14 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(UserSeeder::class);
-        $this->call(HotelSeeder::class);
-        $this->call(FacilitySeeder::class);
-        $this->call(RoleUserSeeder::class);
-        $this->call(ReviewSeeder::class);
-        $this->call(RoomSeeder::class);
-        $this->call(FacilityHotelSeeder::class);
-        $this->call(FacilityRoomSeeder::class);
-        $this->call(BookingSeeder::class);
+        // \App\Models\User::factory(10)->create();
+
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
